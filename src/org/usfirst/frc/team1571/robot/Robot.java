@@ -28,9 +28,9 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	Joystick buttonStick;
-	public static RobotDrive myRobot;
+	
 	public static Drive myRobotDrive = new Drive();
-	Victor frontLeft, frontRight, backLeft, backRight;
+	
     Command autonomousCommand;
 
     /**
@@ -41,11 +41,7 @@ public class Robot extends IterativeRobot {
 		oi = new OI();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
-        frontLeft = new Victor(2);
-    	frontRight = new Victor(0);
-    	backLeft = new Victor(3);
-    	backRight = new Victor(1);
-    	myRobot = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
+     
     	
     }
     

@@ -1,9 +1,11 @@
 package org.usfirst.frc.team1571.robot.subsystems;
 
+import org.usfirst.frc.team1571.robot.Robot;
 import org.usfirst.frc.team1571.robot.RobotMap;
 import org.usfirst.frc.team1571.robot.commands.DriveWithJoystick;
 
 import edu.wpi.first.wpilibj.Jaguar;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Victor;
@@ -29,7 +31,13 @@ public class Drive extends Subsystem {
 		rightBackMotor = new Jaguar(RobotMap.DriveMap.PWM_RIGHT_BACK);
 	}
 	
-
+	public void arcadeDrive(Joystick buttonStick){
+		double yVal = buttonStick.getRawAxis(1);
+		double xVal = buttonStick.getRawAxis(2);
+		
+		this.setLeftSpeed(someVal);
+		this.setRightSpeed(someVal);
+	}
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
