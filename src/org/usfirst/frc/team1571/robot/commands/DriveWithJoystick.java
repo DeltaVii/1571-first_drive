@@ -1,13 +1,13 @@
 package org.usfirst.frc.team1571.robot.commands;
 
-import org.usfirst.frc.team1571.robot.OI;
+
 import org.usfirst.frc.team1571.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-import org.usfirst.frc.team1571.robot.subsystems.Drive;
+
 
 /**
- *
+ *;
  */
 public class DriveWithJoystick extends Command {
 
@@ -19,12 +19,12 @@ public class DriveWithJoystick extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.myRobotDrive.stop();
+   
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.myRobotDrive.arcadeDrive(Robot.oi.buttonStick.getRawAxis(1));
+    	Robot.Drive.arcadeDrive(Robot.oi.getDriveJoystick());
     }
 
     // Make this return true when this Command no longer needs to run execute()

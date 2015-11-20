@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-import org.usfirst.frc.team1571.robot.commands.ExampleCommand;
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -40,4 +40,7 @@ public class OI {
 	
 	public Joystick buttonStick = new Joystick(0);
 	Button trigger = new JoystickButton(buttonStick, 1);
+	public Joystick getDriveJoystick() {
+		return buttonStick;
+	}
 }

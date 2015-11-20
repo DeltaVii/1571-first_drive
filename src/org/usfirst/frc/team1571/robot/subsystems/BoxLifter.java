@@ -1,9 +1,8 @@
 package org.usfirst.frc.team1571.robot.subsystems;
 
-import org.usfirst.frc.team1571.robot.RobotMap;
 
-import edu.wpi.first.wpilibj.Talon;
-import edu.wpi.first.wpilibj.command.Subsystem;
+
+
 
 /**
  *The chains and hooks that lift up totes. Run by Talon controller assigned #4.

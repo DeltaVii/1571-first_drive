@@ -3,17 +3,12 @@ package org.usfirst.frc.team1571.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.RobotDrive;
-import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.Victor;
-import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team1571.robot.commands.ExampleCommand;
+
 import org.usfirst.frc.team1571.robot.subsystems.Drive;
-import org.usfirst.frc.team1571.robot.subsystems.ExampleSubsystem;
+
 import org.usfirst.frc.team1571.robot.OI;
 
 /**
@@ -25,7 +20,7 @@ import org.usfirst.frc.team1571.robot.OI;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final Drive Drive = new Drive();
 	public static OI oi;
 	Joystick buttonStick;
 	
@@ -40,7 +35,7 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         // instantiate the command used for the autonomous period
-        autonomousCommand = new ExampleCommand();
+        
      
     	
     }
