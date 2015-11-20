@@ -24,7 +24,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	Joystick buttonStick;
 	
-	public static Drive myRobotDrive = new Drive();
+	
 	
     Command autonomousCommand;
 
